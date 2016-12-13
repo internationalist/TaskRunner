@@ -4,9 +4,13 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Consumer;
 
+import org.apache.log4j.Logger;
+
 public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
+	private final static Logger logger = Logger.getLogger(Engine.class);
 	private Queue<T> jobQueue;
 	private volatile boolean running = false;
 	private long lastRunTime;
@@ -21,14 +25,14 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 
 	@Override
 	public void run() {
+		String methodName = "run()";
 		running = true;
-		//lastRunTime=System.currentTimeMillis();
 		long interval;
 		while(running) {
 			interval = System.currentTimeMillis() - lastRunTime;
 			if(interval > intervalInMillis) {
-				System.out.println("Free Thread Size: " + freeThreads.size());
-				System.out.println("Busy Thread Size: " + busyThreads.size());				
+				logger.debug(methodName + " Free Thread Size: " + freeThreads.size());
+				logger.debug(methodName + " Busy Thread Size: " + busyThreads.size());				
 				for(Iterator<T> iterator = jobQueue.iterator(); iterator.hasNext();) {
 					T data = iterator.next();
 					TaskThread<T> thread = freeThreads.poll();
@@ -43,7 +47,7 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 							thread = freeThreads.poll();
 							assignJobToThread(iterator, data, thread);							
 						} else {
-							System.out.println("Max thread number reached. No more free threads.");
+							logger.debug(methodName + " Max thread number reached. No more free threads.");
 							break;							
 						}
 					}					
@@ -61,8 +65,8 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 	
 	public Engine(Consumer<T> c) {
 		this.task = c;
-		freeThreads = new LinkedList<TaskThread<T>>();
-		busyThreads = new LinkedList<TaskThread<T>>();
+		freeThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
+		busyThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
 		createNewTreads(minThreadCount);
 	}
 
@@ -132,11 +136,12 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 	}
 
 	public void onServiceEnd(TaskThreadEvent<T> event) {
+		String methodName = "onServiceEnd";
 		TaskThread<T> tt = event.getSource();
-		System.out.println("Before freeing thread Free:" + freeThreads.size() + " busy:" + busyThreads.size());
+		logger.debug(methodName + " Before freeing thread Free:" + freeThreads.size() + " busy:" + busyThreads.size());
 		busyThreads.remove(tt);
 		freeThreads.add(tt);
-		System.out.println("After freeing thread Free:" + freeThreads.size() + " busy:" + busyThreads.size());		
+		logger.debug(methodName + " After freeing thread Free:" + freeThreads.size() + " busy:" + busyThreads.size());		
 	}
 
 }
