@@ -1,560 +1,112 @@
-2016-12-12 21:48:09 DEBUG Engine:34 - run() Free Thread Size: 2
-2016-12-12 21:48:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:48:09 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:14 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:48:14 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:48:14 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:48:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:48:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:48:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:48:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:48:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:48:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:48:19 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:24 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:48:24 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:48:24 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:48:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:48:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:48:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:48:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:48:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:48:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:48:29 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:34 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:48:34 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:48:34 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:48:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:48:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:48:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:48:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:48:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:48:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:48:39 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:44 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:48:44 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:48:44 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:48:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:48:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:48:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:48:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:48:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:48:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:48:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:48:49 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:54 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:48:54 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:48:54 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:48:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:48:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:48:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:48:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:48:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:48:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:48:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:48:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:48:59 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:04 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:49:04 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:49:04 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:49:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:49:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:49:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:49:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:49:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:49:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:49:09 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:14 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:49:14 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:49:14 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:49:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:49:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:49:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:49:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:49:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:49:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:49:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:49:19 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:24 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:49:24 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:49:24 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:49:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:49:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:49:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:49:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:49:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:49:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:49:29 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:34 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:49:34 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:49:34 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:49:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:49:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:49:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:49:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:49:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:49:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:49:39 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:44 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:49:44 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:49:44 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:49:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:49:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:49:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:49:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:49:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:49:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:49:49 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:54 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:49:54 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:49:54 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:49:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:49:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:49:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:49:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:49:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:49:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:49:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:49:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:49:59 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:04 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:50:04 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:50:04 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:50:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:50:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:50:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:50:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:50:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:50:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:50:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:50:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:50:09 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:14 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:50:14 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:50:14 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:50:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:50:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:50:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:50:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:50:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:50:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:50:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:50:19 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:24 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:50:24 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:50:24 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:50:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:50:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:50:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:50:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:50:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:50:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:50:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:50:29 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:34 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:50:34 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:50:34 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:50:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:50:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:50:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:50:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:50:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:50:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:50:39 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:44 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:50:44 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:50:44 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:50:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:50:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:50:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:47 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:50:47 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:50:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:50:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:50:49 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:54 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:50:54 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:50:54 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:50:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:50:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:50:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:50:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:50:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:50:57 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:50:57 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:50:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:50:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:50:59 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:51:04 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:51:04 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:51:04 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:51:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:51:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:51:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:51:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:51:07 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:07 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:51:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:51:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:51:09 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:51:14 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:51:14 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:51:14 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:51:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:51:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:51:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:51:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:1 busy:4
-2016-12-12 21:51:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:51:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:51:17 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:17 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:51:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:51:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:51:19 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:51:24 DEBUG Engine:34 - run() Free Thread Size: 0
-2016-12-12 21:51:24 DEBUG Engine:35 - run() Busy Thread Size: 5
-2016-12-12 21:51:24 DEBUG Engine:50 - run() Max thread number reached. No more free threads.
-2016-12-12 21:51:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:2 busy:3
-2016-12-12 21:51:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:3 busy:2
-2016-12-12 21:51:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:4 busy:1
-2016-12-12 21:51:27 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:0 busy:5
-2016-12-12 21:51:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:51:27 DEBUG Engine:144 - onServiceEnd After freeing thread Free:1 busy:4
-2016-12-12 21:51:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:51:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:51:34 DEBUG Engine:34 - run() Free Thread Size: 4
-2016-12-12 21:51:34 DEBUG Engine:35 - run() Busy Thread Size: 1
-2016-12-12 21:51:37 DEBUG Engine:141 - onServiceEnd Before freeing thread Free:4 busy:1
-2016-12-12 21:51:37 DEBUG Engine:144 - onServiceEnd After freeing thread Free:5 busy:0
-2016-12-12 21:51:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:51:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:51:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:51:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:51:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:51:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:51:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:51:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:51:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:51:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:52:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:52:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:53:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:53:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:54:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:54:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:55:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:55:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:56:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:56:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:57:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:57:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:58:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:58:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 21:59:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 21:59:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:19 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:24 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:24 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:29 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:29 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:34 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:34 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:39 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:39 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:44 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:44 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:49 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:49 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:54 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:54 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:00:59 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:00:59 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:01:04 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:01:04 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:01:09 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:01:09 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:01:14 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:01:14 DEBUG Engine:35 - run() Busy Thread Size: 0
-2016-12-12 22:01:19 DEBUG Engine:34 - run() Free Thread Size: 5
-2016-12-12 22:01:19 DEBUG Engine:35 - run() Busy Thread Size: 0
+2016-12-13 23:16:31 INFO  Engine:85 - #####TASKRUNNER STARTING WITH CONFIGURATION#####
+2016-12-13 23:16:31 INFO  Engine:86 - Configuration [intervalInMillis=5000, minThreadCount=50, maxThreadCount=100, threadIncrementSize=2]
+2016-12-13 23:16:31 INFO  Engine:87 - ################################################
+2016-12-13 23:16:31 DEBUG Engine:40 - run() Free Thread Size: 50
+2016-12-13 23:16:31 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:16:36 DEBUG Engine:40 - run() Free Thread Size: 3
+2016-12-13 23:16:36 DEBUG Engine:41 - run() Busy Thread Size: 47
+2016-12-13 23:16:36 DEBUG Engine:56 - run() Max thread number reached. No more free threads.
+2016-12-13 23:16:41 DEBUG Engine:40 - run() Free Thread Size: 47
+2016-12-13 23:16:41 DEBUG Engine:41 - run() Busy Thread Size: 53
+2016-12-13 23:16:46 DEBUG Engine:40 - run() Free Thread Size: 99
+2016-12-13 23:16:46 DEBUG Engine:41 - run() Busy Thread Size: 1
+2016-12-13 23:16:51 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:16:51 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:16:56 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:16:56 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:01 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:01 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:06 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:06 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:11 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:11 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:16 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:16 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:21 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:21 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:26 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:26 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:31 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:31 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:36 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:36 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:41 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:41 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:46 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:46 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:51 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:51 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:17:56 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:17:56 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:01 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:01 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:06 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:06 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:11 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:11 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:16 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:16 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:21 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:21 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:26 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:26 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:31 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:31 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:36 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:36 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:41 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:41 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:46 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:46 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:51 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:51 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:18:56 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:18:56 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:19:01 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:19:01 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:19:06 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:19:06 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:19:11 DEBUG Engine:40 - run() Free Thread Size: 100
+2016-12-13 23:19:11 DEBUG Engine:41 - run() Busy Thread Size: 0
+2016-12-13 23:19:49 INFO  Engine:84 - ###############TASKRUNNER STARTING WITH CONFIGURATION###############
+2016-12-13 23:19:49 INFO  Engine:85 - Configuration [intervalInMillis=5000, minThreadCount=50, maxThreadCount=100, threadIncrementSize=2]
+2016-12-13 23:19:49 INFO  Engine:86 - ####################################################################
+2016-12-13 23:19:49 DEBUG Engine:39 - run() Free Thread Size: 50
+2016-12-13 23:19:49 DEBUG Engine:40 - run() Busy Thread Size: 0
+2016-12-13 23:19:49 DEBUG Engine:55 - run() Max thread number reached. No more free threads.
+2016-12-13 23:19:54 DEBUG Engine:39 - run() Free Thread Size: 0
+2016-12-13 23:19:54 DEBUG Engine:40 - run() Busy Thread Size: 100
+2016-12-13 23:19:54 DEBUG Engine:55 - run() Max thread number reached. No more free threads.
+2016-12-13 23:20:11 INFO  Engine:84 - ###############TASKRUNNER STARTING WITH CONFIGURATION##############################
+2016-12-13 23:20:11 INFO  Engine:85 - Configuration [intervalInMillis=5000, minThreadCount=50, maxThreadCount=100, threadIncrementSize=2]
+2016-12-13 23:20:11 INFO  Engine:86 - ###################################################################################
+2016-12-13 23:20:11 DEBUG Engine:39 - run() Free Thread Size: 50
+2016-12-13 23:20:11 DEBUG Engine:40 - run() Busy Thread Size: 0
+2016-12-13 23:20:11 DEBUG Engine:55 - run() Max thread number reached. No more free threads.
+2016-12-13 23:20:16 DEBUG Engine:39 - run() Free Thread Size: 0
+2016-12-13 23:20:16 DEBUG Engine:40 - run() Busy Thread Size: 100
+2016-12-13 23:20:16 DEBUG Engine:55 - run() Max thread number reached. No more free threads.
+2016-12-13 23:20:30 INFO  Engine:84 - ###############TASKRUNNER STARTING WITH CONFIGURATION#############################################
+2016-12-13 23:20:30 INFO  Engine:85 - Configuration [intervalInMillis=5000, minThreadCount=50, maxThreadCount=100, threadIncrementSize=2]
+2016-12-13 23:20:30 INFO  Engine:86 - ##################################################################################################
+2016-12-13 23:20:30 DEBUG Engine:39 - run() Free Thread Size: 50
+2016-12-13 23:20:30 DEBUG Engine:40 - run() Busy Thread Size: 0
+2016-12-13 23:20:30 DEBUG Engine:55 - run() Max thread number reached. No more free threads.
+2016-12-13 23:20:35 DEBUG Engine:39 - run() Free Thread Size: 0
+2016-12-13 23:20:35 DEBUG Engine:40 - run() Busy Thread Size: 100
+2016-12-13 23:20:35 DEBUG Engine:55 - run() Max thread number reached. No more free threads.
+2016-12-13 23:21:12 INFO  Engine:84 - ##############################TASKRUNNER STARTING WITH CONFIGURATION###################################
+2016-12-13 23:21:12 INFO  Engine:85 - Configuration [intervalInMillis=5000, minThreadCount=50, maxThreadCount=100, threadIncrementSize=2]
+2016-12-13 23:21:12 INFO  Engine:86 - #######################################################################################################
+2016-12-13 23:21:12 DEBUG Engine:39 - run() Free Thread Size: 50
+2016-12-13 23:21:12 DEBUG Engine:40 - run() Busy Thread Size: 0
+2016-12-13 23:21:12 DEBUG Engine:55 - run() Max thread number reached. No more free threads.
+2016-12-13 23:21:17 DEBUG Engine:39 - run() Free Thread Size: 0
+2016-12-13 23:21:17 DEBUG Engine:40 - run() Busy Thread Size: 100
+2016-12-13 23:21:17 DEBUG Engine:55 - run() Max thread number reached. No more free threads.
+2016-12-13 23:21:22 DEBUG Engine:39 - run() Free Thread Size: 100
+2016-12-13 23:21:22 DEBUG Engine:40 - run() Busy Thread Size: 0
+2016-12-13 23:21:27 DEBUG Engine:39 - run() Free Thread Size: 99
+2016-12-13 23:21:27 DEBUG Engine:40 - run() Busy Thread Size: 1
+2016-12-13 23:21:32 DEBUG Engine:39 - run() Free Thread Size: 100
+2016-12-13 23:21:32 DEBUG Engine:40 - run() Busy Thread Size: 0

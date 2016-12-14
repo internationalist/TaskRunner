@@ -1,12 +1,10 @@
 package org.aguntuk.threadengine;
 
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Queue;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Consumer;
-
 import org.apache.log4j.Logger;
 
 public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
@@ -14,46 +12,56 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 	private Queue<T> jobQueue;
 	private volatile boolean running = false;
 	private long lastRunTime;
-	private long intervalInMillis = 5000;
 	private Queue<TaskThread<T>> freeThreads;
 	private Queue<TaskThread<T>> busyThreads;
 	
-	private int minThreadCount=2;
-	private int maxThreadCount=5;
-	private int threadIncrementSize=2;
 	private Consumer<T> task;
+	private Configuration config = new Configuration() {
+		@Override
+		public void init() {
+			this.intervalInMillis = 5000;
+			this.minThreadCount = 2;
+			this.maxThreadCount = 5;
+			this.threadIncrementSize=2;
+		}
+	};
 
 	@Override
 	public void run() {
-		String methodName = "run()";
-		running = true;
-		long interval;
-		while(running) {
-			interval = System.currentTimeMillis() - lastRunTime;
-			if(interval > intervalInMillis) {
-				logger.debug(methodName + " Free Thread Size: " + freeThreads.size());
-				logger.debug(methodName + " Busy Thread Size: " + busyThreads.size());				
-				for(Iterator<T> iterator = jobQueue.iterator(); iterator.hasNext();) {
-					T data = iterator.next();
-					TaskThread<T> thread = freeThreads.poll();
-					if(thread != null) {
-						assignJobToThread(iterator, data, thread);						
-					} else {
-						//out of threads increment it.
-						if(freeThreads.size() + busyThreads.size() < maxThreadCount) {
-							int toMaxThreadCount = maxThreadCount - (freeThreads.size() + busyThreads.size());
-							int newThreads = toMaxThreadCount < threadIncrementSize?toMaxThreadCount:threadIncrementSize;
-							createNewTreads(newThreads);
-							thread = freeThreads.poll();
-							assignJobToThread(iterator, data, thread);							
+		try {
+			String methodName = "run()";
+			running = true;
+			long interval;
+			while(running) {
+				interval = System.currentTimeMillis() - lastRunTime;
+				if(interval > config.intervalInMillis) {
+					logger.debug(methodName + " Free Thread Size: " + freeThreads.size());
+					logger.debug(methodName + " Busy Thread Size: " + busyThreads.size());				
+					for(Iterator<T> iterator = jobQueue.iterator(); iterator.hasNext();) {
+						T data = iterator.next();
+						TaskThread<T> thread = freeThreads.poll();
+						if(thread != null) {
+							assignJobToThread(iterator, data, thread);						
 						} else {
-							logger.debug(methodName + " Max thread number reached. No more free threads.");
-							break;							
-						}
-					}					
+							//out of threads increment it.
+							if(freeThreads.size() + busyThreads.size() < config.maxThreadCount) {
+								int toMaxThreadCount = config.maxThreadCount - (freeThreads.size() + busyThreads.size());
+								int newThreads = toMaxThreadCount < config.threadIncrementSize?toMaxThreadCount:config.threadIncrementSize;
+								createNewTreads(newThreads);
+								thread = freeThreads.poll();
+								assignJobToThread(iterator, data, thread);							
+							} else {
+								logger.debug(methodName + " Max thread number reached. No more free threads.");
+								break;							
+							}
+						}					
+					}
+					lastRunTime = System.currentTimeMillis();
 				}
-				lastRunTime = System.currentTimeMillis();
 			}
+		} catch(Throwable t) {
+			//catch any and all exceptions and report it
+			logger.error(Utils.instance.getStackTrace(t));
 		}
 	}
 
@@ -63,11 +71,23 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 		iterator.remove();
 	}
 	
-	public Engine(Consumer<T> c) {
+	public Engine(Consumer<T> c, Configuration config) {
+		if(config != null) {
+			this.config=config;
+		}
+		this.jobQueue = new ConcurrentLinkedQueue<T>();
 		this.task = c;
 		freeThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
 		busyThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
-		createNewTreads(minThreadCount);
+		createNewTreads(this.config.minThreadCount);
+		logger.info("##############################TASKRUNNER STARTING WITH CONFIGURATION###################################");
+		logger.info(this.config);
+		logger.info("#######################################################################################################");
+		this.start();
+	}
+	
+	public Engine(Consumer<T> c) {
+		this(c, null);
 	}
 
 	private void createNewTreads(int newThreads) {
@@ -80,28 +100,13 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 		}
 	}
 	
-	public Queue<T> getJobQueue() {
-		return jobQueue;
-	}
-
-	public void setJobQueue(Queue<T> jobQueue) {
-		this.jobQueue = jobQueue;
-	}
-
-	public long getLastRunTime() {
-		return lastRunTime;
-	}
-
-	public void setLastRunTime(long lastRunTime) {
-		this.lastRunTime = lastRunTime;
-	}
 
 	public long getIntervalInMillis() {
-		return intervalInMillis;
+		return config.intervalInMillis;
 	}
 
 	public void setIntervalInMillis(long intervalInMillis) {
-		this.intervalInMillis = intervalInMillis;
+		this.config.intervalInMillis = intervalInMillis;
 	}
 
 	public boolean isRunning() {
@@ -123,25 +128,27 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 				e.printStackTrace();
 			}
 			System.out.println(s);
+		}, new Configuration() {
+			@Override
+			public void init() {
+				this.intervalInMillis=5000;
+				this.minThreadCount=50;
+				this.maxThreadCount=100;
+			}		
 		});
-		Queue<String> queue = new LinkedList<String>();
 		for(int i = 0; i < 100; i++) {
-			queue.add("data " + i);
+			engine.addJob("Job " + i);
 		}
-		engine.setJobQueue(queue);
-		engine.start();
 		engine.addJob("New Job Added!");
-		//engine.setRunning(false);
-		
 	}
 
-	public void onServiceEnd(TaskThreadEvent<T> event) {
+	public final void onServiceEnd(TaskThreadEvent<T> event) {
 		String methodName = "onServiceEnd";
 		TaskThread<T> tt = event.getSource();
-		logger.debug(methodName + " Before freeing thread Free:" + freeThreads.size() + " busy:" + busyThreads.size());
+		logger.trace(methodName + " Before freeing thread Free:" + freeThreads.size() + " busy:" + busyThreads.size());
 		busyThreads.remove(tt);
 		freeThreads.add(tt);
-		logger.debug(methodName + " After freeing thread Free:" + freeThreads.size() + " busy:" + busyThreads.size());		
+		logger.trace(methodName + " After freeing thread Free:" + freeThreads.size() + " busy:" + busyThreads.size());		
 	}
 
 }

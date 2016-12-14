@@ -4,25 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-import org.aguntuk.resource.Resource;
+import org.apache.log4j.Logger;
 
-public class TaskThread<T> implements Runnable, Resource {
+class TaskThread<T> implements Runnable {
+	private final static Logger logger = Logger.getLogger(TaskThread.class);	
 	
 	private Consumer<T> task;
 	private T data;
 	private List<TaskThreadEventListener<T>> listeners;
 	private String threadName;
 
-	public String getThreadName() {
+	String getThreadName() {
 		return threadName;
 	}
 
 	private boolean jobAssigned = false;
-	
-
-	public void init() throws Throwable {
-		
-	}
 	
 	@Override
 	public int hashCode() {
@@ -50,32 +46,27 @@ public class TaskThread<T> implements Runnable, Resource {
 		return true;
 	}
 
-	public synchronized void setData(T data) {
+	synchronized void setData(T data) {
 		this.data = data;
 		jobAssigned=true;
 		notifyAll();
 	}
 
-	public TaskThread(String name, Consumer<T> task) {
+	TaskThread(String name, Consumer<T> task) {
+		this.threadName = name;
 		this.task = task;
 		listeners = new ArrayList<TaskThreadEventListener<T>>();
 	}
 	
-	public void addListener(TaskThreadEventListener<T> listener) {
+	void addListener(TaskThreadEventListener<T> listener) {
 		this.listeners.add(listener);
 	}
 
-	public void service() throws Throwable {
+	void service() throws Throwable {
+		String methodname = "service()";
+		logger.trace("ThreadName::" + threadName + "::" + methodname + " starting");
 		task.accept(this.data);
-	}
-
-	public void shutdown() throws Throwable {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	public boolean isBusy() {
-		return jobAssigned;
+		logger.trace("ThreadName::" + threadName + "::" + methodname + " exiting");		
 	}
 	
     /**
@@ -92,20 +83,21 @@ public class TaskThread<T> implements Runnable, Resource {
                         } catch(InterruptedException e) {
                         }
                     }
-                    //while
                     service();
                     jobAssigned=false; 
-                    for(TaskThreadEventListener<T> listener:listeners) {
-                    	TaskThreadEvent<T> event = new TaskThreadEvent<T>(this);
-                    	listener.onServiceEnd(event);
-                    }
+                    fireThreadEndEvent();
                 }
             }
-	        //while
-	    //if bSetupDone
 	    } catch(Throwable t) {
-	    	t.printStackTrace();
+	    	logger.error("ThreadName::" + threadName + " Error occured. " + Utils.instance.getStackTrace(t));
 	    }
     }
+
+	private void fireThreadEndEvent() {
+		for(TaskThreadEventListener<T> listener:listeners) {
+			TaskThreadEvent<T> event = new TaskThreadEvent<T>(this);
+			listener.onServiceEnd(event);
+		}
+	}
 
 }

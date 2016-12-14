@@ -1,6 +1,6 @@
 package org.aguntuk.threadengine;
 
-public class TaskThreadEvent<T> {
+class TaskThreadEvent<T> {
 	private TaskThread<T> source;
 	
 	public TaskThreadEvent(TaskThread<T> source) {
