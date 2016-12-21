@@ -32,29 +32,38 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 			String methodName = "run()";
 			running = true;
 			long interval;
+			logger.info("Max jobs per cycle is " + config.maxJobsPerCycle);
 			while(running) {
 				interval = System.currentTimeMillis() - lastRunTime;
 				if(interval > config.intervalInMillis) {
 					logger.debug(methodName + " Free Thread Size: " + freeThreads.size());
-					logger.debug(methodName + " Busy Thread Size: " + busyThreads.size());				
+					logger.debug(methodName + " Busy Thread Size: " + busyThreads.size());
+					int numJobsAssigned=0;
 					for(Iterator<T> iterator = jobQueue.iterator(); iterator.hasNext();) {
-						T data = iterator.next();
-						TaskThread<T> thread = freeThreads.poll();
-						if(thread != null) {
-							assignJobToThread(iterator, data, thread);						
-						} else {
-							//out of threads increment it.
-							if(freeThreads.size() + busyThreads.size() < config.maxThreadCount) {
-								int toMaxThreadCount = config.maxThreadCount - (freeThreads.size() + busyThreads.size());
-								int newThreads = toMaxThreadCount < config.threadIncrementSize?toMaxThreadCount:config.threadIncrementSize;
-								createNewTreads(newThreads);
-								thread = freeThreads.poll();
-								assignJobToThread(iterator, data, thread);							
+						if(config.maxJobsPerCycle==0 || numJobsAssigned < config.maxJobsPerCycle) {
+							T data = iterator.next();
+							TaskThread<T> thread = freeThreads.poll();
+							if(thread != null) {
+								assignJobToThread(iterator, data, thread);						
 							} else {
-								logger.debug(methodName + " Max thread number reached. No more free threads.");
-								break;							
+								//out of threads increment it.
+								if(freeThreads.size() + busyThreads.size() < config.maxThreadCount) {
+									int toMaxThreadCount = config.maxThreadCount - (freeThreads.size() + busyThreads.size());
+									int newThreads = toMaxThreadCount < config.threadIncrementSize?toMaxThreadCount:config.threadIncrementSize;
+									createNewTreads(newThreads);
+									thread = freeThreads.poll();
+									assignJobToThread(iterator, data, thread);							
+								} else {
+									logger.debug(methodName + " Max thread number reached. No more free threads.");
+									break;							
+								}
 							}
-						}					
+							++numJobsAssigned;
+						} else {
+							logger.debug(methodName + " Max jobs being processed!");
+							break;
+						}
+
 					}
 					lastRunTime = System.currentTimeMillis();
 				}
@@ -131,12 +140,15 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 		}, new Configuration() {
 			@Override
 			public void init() {
-				this.intervalInMillis=5000;
+				this.intervalInMillis=1000;
 				this.minThreadCount=50;
-				this.maxThreadCount=100;
+				this.maxThreadCount=50;
+				this.maxJobsPerCycle=50;
 			}		
 		});
-		for(int i = 0; i < 100; i++) {
+
+		
+		for(int i = 0; i < 500; i++) {
 			engine.addJob("Job " + i);
 		}
 		engine.addJob("New Job Added!");

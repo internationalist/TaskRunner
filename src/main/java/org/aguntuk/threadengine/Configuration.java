@@ -4,7 +4,8 @@ public abstract class Configuration {
 	public long intervalInMillis=5000;
 	public int minThreadCount=2;
 	public int maxThreadCount=5;
-	public int threadIncrementSize=2;	
+	public int threadIncrementSize=2;
+	public int maxJobsPerCycle;
 	public Configuration() {
 		init();
 	}
