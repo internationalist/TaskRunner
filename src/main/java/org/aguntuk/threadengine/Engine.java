@@ -5,6 +5,8 @@ import java.util.Queue;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
+
 import org.apache.log4j.Logger;
 
 public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
@@ -80,11 +82,18 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 		iterator.remove();
 	}
 	
-	public Engine(Consumer<T> c, Configuration config) {
+	public Engine(Consumer<T> c, Supplier<Queue<T>> populator, Configuration config) {
 		if(config != null) {
 			this.config=config;
 		}
+		
 		this.jobQueue = new ConcurrentLinkedQueue<T>();
+		Queue<T> assignedJobs = populator.get();
+		if(assignedJobs != null && !(assignedJobs instanceof ConcurrentLinkedQueue)) {
+			this.jobQueue=new ConcurrentLinkedQueue<T>(assignedJobs);
+		} else if(assignedJobs != null) {
+			this.jobQueue=assignedJobs;
+		}
 		this.task = c;
 		freeThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
 		busyThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
@@ -96,8 +105,12 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 	}
 	
 	public Engine(Consumer<T> c) {
-		this(c, null);
+		this(c, null, null);
 	}
+	
+	public Engine(Consumer<T> c, Supplier<Queue<T>> populator) {
+		this(c, populator, null);
+	}	
 
 	private void createNewTreads(int newThreads) {
 		for(int i = 0; i < newThreads; i++) {
