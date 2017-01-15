@@ -108,6 +108,10 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 		this(c, null, null);
 	}
 	
+	public Engine(Consumer<T> c, Configuration config) {
+		this(c, null, config);
+	}	
+	
 	public Engine(Consumer<T> c, Supplier<Queue<T>> populator) {
 		this(c, populator, null);
 	}	
