@@ -16,6 +16,7 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 	private long lastRunTime;
 	private Queue<TaskThread<T>> freeThreads;
 	private Queue<TaskThread<T>> busyThreads;
+	private Supplier<Queue<T>> populator;
 	
 	private Consumer<T> task;
 	private Configuration config = new Configuration() {
@@ -41,6 +42,8 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 					logger.debug(methodName + " Free Thread Size: " + freeThreads.size());
 					logger.debug(methodName + " Busy Thread Size: " + busyThreads.size());
 					int numJobsAssigned=0;
+					//invoke the job populator if it is not null
+					invokeJobPopulator(this.populator);
 					for(Iterator<T> iterator = jobQueue.iterator(); iterator.hasNext();) {
 						if(config.maxJobsPerCycle==0 || numJobsAssigned < config.maxJobsPerCycle) {
 							T data = iterator.next();
@@ -86,14 +89,9 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 		if(config != null) {
 			this.config=config;
 		}
-		
 		this.jobQueue = new ConcurrentLinkedQueue<T>();
-		Queue<T> assignedJobs = populator.get();
-		if(assignedJobs != null && !(assignedJobs instanceof ConcurrentLinkedQueue)) {
-			this.jobQueue=new ConcurrentLinkedQueue<T>(assignedJobs);
-		} else if(assignedJobs != null) {
-			this.jobQueue=assignedJobs;
-		}
+		this.populator=populator;
+		invokeJobPopulator(this.populator);
 		this.task = c;
 		freeThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
 		busyThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
@@ -102,6 +100,19 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 		logger.info(this.config);
 		logger.info("#######################################################################################################");
 		this.start();
+	}
+
+	private void invokeJobPopulator(Supplier<Queue<T>> populator) {
+		if(populator != null) {
+			Queue<T> assignedJobs = populator.get();
+			if(assignedJobs != null && !(assignedJobs instanceof ConcurrentLinkedQueue)) {
+				this.jobQueue=new ConcurrentLinkedQueue<T>(assignedJobs);
+			} else if(assignedJobs != null && this.jobQueue == null) {
+				this.jobQueue=assignedJobs;
+			} else if(assignedJobs != null && this.jobQueue != null) {
+				this.jobQueue.addAll(assignedJobs);
+			}
+		}
 	}
 	
 	public Engine(Consumer<T> c) {
