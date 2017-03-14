@@ -18,7 +18,7 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 	private Queue<TaskThread<T>> busyThreads;
 	private Supplier<Queue<T>> populator;
 	
-	private Consumer<T> task;
+	private Object task;
 	private Configuration config = new Configuration() {
 		@Override
 		public void init() {
@@ -41,34 +41,25 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 				if(interval > config.intervalInMillis) {
 					logger.debug(methodName + " Free Thread Size: " + freeThreads.size());
 					logger.debug(methodName + " Busy Thread Size: " + busyThreads.size());
-					int numJobsAssigned=0;
-					//invoke the job populator if it is not null
-					invokeJobPopulator(this.populator);
-					for(Iterator<T> iterator = jobQueue.iterator(); iterator.hasNext();) {
-						if(config.maxJobsPerCycle==0 || numJobsAssigned < config.maxJobsPerCycle) {
-							T data = iterator.next();
-							TaskThread<T> thread = freeThreads.poll();
-							if(thread != null) {
-								assignJobToThread(iterator, data, thread);						
-							} else {
-								//out of threads increment it.
-								if(freeThreads.size() + busyThreads.size() < config.maxThreadCount) {
-									int toMaxThreadCount = config.maxThreadCount - (freeThreads.size() + busyThreads.size());
-									int newThreads = toMaxThreadCount < config.threadIncrementSize?toMaxThreadCount:config.threadIncrementSize;
-									createNewTreads(newThreads);
-									thread = freeThreads.poll();
-									assignJobToThread(iterator, data, thread);							
-								} else {
-									logger.debug(methodName + " Max thread number reached. No more free threads.");
-									break;							
+					if(task instanceof Consumer<?>) {
+						int numJobsAssigned=0;
+						//invoke the job populator if it is not null
+						invokeJobPopulator(this.populator);
+						for(Iterator<T> iterator = jobQueue.iterator(); iterator.hasNext();) {
+							if(config.maxJobsPerCycle==0 || numJobsAssigned < config.maxJobsPerCycle) {
+								T data = iterator.next();
+								if(runThread(data)) {
+									break;
 								}
+								iterator.remove();
+								++numJobsAssigned;
+							} else {
+								logger.debug(methodName + " Max jobs being processed!");
+								break;
 							}
-							++numJobsAssigned;
-						} else {
-							logger.debug(methodName + " Max jobs being processed!");
-							break;
 						}
-
+					} else {
+						runThread(null);
 					}
 					lastRunTime = System.currentTimeMillis();
 				}
@@ -78,11 +69,32 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 			logger.error(Utils.instance.getStackTrace(t));
 		}
 	}
+	
+	private boolean runThread(T data) {
+		TaskThread<T> thread = freeThreads.poll();		
+		boolean retValue = false;
+		String methodName = "runThread()";		
+		if(thread != null) {
+			assignJobToThread(data, thread);						
+		} else {
+			//out of threads increment it.
+			if(freeThreads.size() + busyThreads.size() < config.maxThreadCount) {
+				int toMaxThreadCount = config.maxThreadCount - (freeThreads.size() + busyThreads.size());
+				int newThreads = toMaxThreadCount < config.threadIncrementSize?toMaxThreadCount:config.threadIncrementSize;
+				createNewTreads(newThreads);
+				thread = freeThreads.poll();
+				assignJobToThread(data, thread);							
+			} else {
+				logger.debug(methodName + " Max thread number reached. No more free threads.");
+				retValue=true;							
+			}
+		}
+		return retValue;
+	}
 
-	private void assignJobToThread(Iterator<T> iterator, T data, TaskThread<T> thread) {
+	private void assignJobToThread(T data, TaskThread<T> thread) {
 		thread.setData(data);
 		busyThreads.add(thread);
-		iterator.remove();
 	}
 	
 	public Engine(Consumer<T> c, Supplier<Queue<T>> populator, Configuration config) {
@@ -101,6 +113,20 @@ public class Engine<T> extends Thread implements TaskThreadEventListener<T> {
 		logger.info("#######################################################################################################");
 		this.start();
 	}
+	
+	public Engine(Runnable r, Configuration config) {
+		if(config != null) {
+			this.config=config;
+		}
+		this.task = r;
+		freeThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
+		busyThreads = new ConcurrentLinkedQueue<TaskThread<T>>();
+		createNewTreads(this.config.minThreadCount);
+		logger.info("##############################TASKRUNNER STARTING WITH CONFIGURATION###################################");
+		logger.info(this.config);
+		logger.info("#######################################################################################################");
+		this.start();
+	}	
 
 	private void invokeJobPopulator(Supplier<Queue<T>> populator) {
 		if(populator != null) {

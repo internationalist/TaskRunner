@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 class TaskThread<T> implements Runnable {
 	private final static Logger logger = Logger.getLogger(TaskThread.class);	
 	
-	private Consumer<T> task;
+	private Object task;
 	private T data;
 	private List<TaskThreadEventListener<T>> listeners;
 	private String threadName;
@@ -52,7 +52,7 @@ class TaskThread<T> implements Runnable {
 		notifyAll();
 	}
 
-	TaskThread(String name, Consumer<T> task) {
+	TaskThread(String name, Object task) {
 		this.threadName = name;
 		this.task = task;
 		listeners = new ArrayList<TaskThreadEventListener<T>>();
@@ -62,10 +62,14 @@ class TaskThread<T> implements Runnable {
 		this.listeners.add(listener);
 	}
 
+	@SuppressWarnings("unchecked")
 	void service() throws Throwable {
 		String methodname = "service()";
 		logger.trace("ThreadName::" + threadName + "::" + methodname + " starting");
-		task.accept(this.data);
+		if(task instanceof Consumer<?>)
+			((Consumer<T>) task).accept(this.data);
+		else
+			((Runnable)task).run();
 		logger.trace("ThreadName::" + threadName + "::" + methodname + " exiting");		
 	}
 	
